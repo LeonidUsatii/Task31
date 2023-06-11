@@ -1,17 +1,26 @@
-public class Ellipse extends Square{
-    private int sideB;
+public class Ellipse extends Figure {
+    protected int smallRadius;
+    private int largeRadius;
 
-    public Ellipse(int x, int y, int sideA, int sideB) {
-        super(x, y, sideA);
-        this.sideB = sideB;
+    public Ellipse(int x, int y, int smallRadius, int largeRadius) {
+        super(x, y);
+        this.smallRadius = smallRadius;
+        this.largeRadius = largeRadius;
     }
 
-    public Ellipse(int sideA, int sideB) {
-        super(sideA);
-        this.sideB = sideB;
+    public Ellipse(int smallRadius, int largeRadius) {
+        super(1, 1);
+        this.smallRadius = smallRadius;
+        this.largeRadius = largeRadius;
     }
 
-    public int getSideB() {
-        return sideB;
+
+
+    public int getSmallRadius() {
+        return smallRadius;
+    }
+
+    public int getLargeRadius() {
+        return largeRadius;
     }
 }

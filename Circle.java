@@ -1,22 +1,23 @@
-public class Circle extends Figure{
-    private int radius;
+public class Circle extends Ellipse {
 
     public Circle(int x, int y, int radius) {
-        super(x, y);
-        this.radius = radius;
+
+        super(x, y, radius, radius);
     }
 
     public Circle(int radius) {
-        super(1,1);
-        this.radius = radius;
+
+        super(1, 1, radius, radius);
     }
 
     public Circle() {
-        super(1,1);
-        this.radius = 1;
+        super(
+                1, 1, 1, 1);
     }
 
     public int getRadius() {
-        return radius;
+
+        return smallRadius;
+
     }
 }
